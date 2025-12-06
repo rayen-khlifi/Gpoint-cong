@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #ffffff, #f1c637);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* Cercle avec effet 3D */
+.cercle-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), inset 0 3px 8px rgba(255, 255, 255, 0.5);
+  margin: 0 auto 20px auto;
+  position: relative;
+  background: linear-gradient(135deg, #ff9d9d, #fccb90);
+}
+
+.cercle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cercle-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Boîte de connexion avec bordure avancée */
+.logina {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Sous-titre */
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: rgb(8, 2, 12);
+}
+
+/* Boîte pour champs d'entrée */
+.box {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  border-bottom: 2px solid rgb(12, 1, 1);
+}
+
+/* Champs d'entrée */
+.box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 5px 0 35px;
+  color: rgb(7, 7, 7);
+  font-size: 1em;
+}
+
+/* Étiquette des champs */
+.box label {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #8a8989;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+/* Effet de focus sur les champs */
+.box input:focus + label,
+.box input:valid + label {
+  top: -5px;
+  font-size: 0.8em;
+  color: #021620;
+  left: 35px;
+}
+
+/* Icône à l'intérieur des champs */
+.box .icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(15, 15, 15);
+  font-size: 1.2em;
+  pointer-events: none;
+}
+
+
+
+/* Bouton de connexion */
+#bt {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #f1c637, #ff9800);
+  color: #080808;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#bt:hover {
+  background: linear-gradient(90deg, #ff9800, #f1c637);
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.6);
+}
+
+/* Lien et texte supplémentaire */
+#forg, a {
+  color: #f1c637;
+  text-decoration: none;
+}
+
+#forg:hover, a:hover {
+  text-decoration: underline;
+  color: #000;
+}
